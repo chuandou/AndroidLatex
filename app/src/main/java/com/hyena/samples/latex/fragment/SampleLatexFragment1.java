@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.himamis.retex.editor.android.FormulaEditor;
 import com.himamis.retex.renderer.android.FactoryProviderAndroid;
 import com.himamis.retex.renderer.android.LaTeXView;
 import com.himamis.retex.renderer.share.platform.FactoryProvider;
@@ -26,8 +27,8 @@ public class SampleLatexFragment1 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        LaTeXView view = new LaTeXView(getActivity());
-        view.setLatexText(ExampleFormula.mExample3);
+        FormulaEditor view = new FormulaEditor(getActivity());
+//        view.setLatexText(ExampleFormula.mExample3);
         return view;
     }
 }
