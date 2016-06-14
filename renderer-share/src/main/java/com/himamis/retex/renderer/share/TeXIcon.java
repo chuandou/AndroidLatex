@@ -272,4 +272,9 @@ public class TeXIcon implements Icon {
         g2.restoreTransformation();
         g2.setColor(oldColor);
     }
+
+    //modify by yangzc
+    public float getSize() {
+        return size;
+    }
 }

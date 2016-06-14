@@ -11,6 +11,7 @@ import com.himamis.retex.editor.android.FormulaEditor;
 import com.himamis.retex.renderer.android.FactoryProviderAndroid;
 import com.himamis.retex.renderer.android.LaTeXView;
 import com.himamis.retex.renderer.share.platform.FactoryProvider;
+import com.hyena.fillin.LatexFillInView;
 
 /**
  * Created by yangzc on 16/6/12.
@@ -27,8 +28,13 @@ public class SampleLatexFragment1 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        FormulaEditor view = new FormulaEditor(getActivity());
-//        view.setLatexText(ExampleFormula.mExample3);
+        LatexFillInView view = new LatexFillInView(getActivity());
+        view.setLatexText(ExampleFormula.mExample4);
         return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
     }
 }

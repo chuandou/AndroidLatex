@@ -20,7 +20,7 @@ import com.himamis.retex.renderer.share.platform.graphics.Insets;
 public class LaTeXView extends View {
 
     private TeXFormula mFormula;
-    private TeXIcon mTexIcon;
+    protected TeXIcon mTexIcon;
     private TeXFormula.TeXIconBuilder mTexIconBuilder;
 
     private Graphics2DA mGraphics;

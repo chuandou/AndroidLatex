@@ -292,4 +292,12 @@ public class Graphics2DA implements Graphics2DInterface {
 		mCanvas.restore();
 		mScaleStack.popScaleValues();
 	}
+
+	public ScaleStack getScaleStack() {
+		return mScaleStack;
+	}
+
+	public Canvas getCanvas() {
+		return mCanvas;
+	}
 }

@@ -292,7 +292,7 @@ public class TeXFormula {
 		this(tp, s, null);
 	}
 
-	protected TeXFormula(TeXParser tp, String s, boolean firstpass) throws ParseException {
+	public TeXFormula(TeXParser tp, String s, boolean firstpass) throws ParseException {
 		this.textStyle = null;
 		this.jlmXMLMap = tp.formula.jlmXMLMap;
 		boolean isPartial = tp.getIsPartial();
