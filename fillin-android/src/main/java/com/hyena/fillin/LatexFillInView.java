@@ -123,6 +123,10 @@ public class LatexFillInView extends LaTeXView {
     }
 
     private void addFillInBox(Box box) {
+        if (box instanceof FillInBox) {
+            mFillInBox.add((FillInBox) box);
+            return;
+        }
         List<Box> children = box.getChildren();
         if (children != null && !children.isEmpty()) {
             for (int i = 0; i < children.size(); i++) {
