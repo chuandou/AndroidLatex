@@ -12,6 +12,6 @@ public class PluginInstaller {
 
     public static void install(Context context) {
         AjLatexMath.init(context);
-        MacroInfo.Commands.put("fillin", new PluginMacroInfo(1, 2));
+        MacroInfo.Commands.put("fillIn", new PluginMacroInfo(1, 2));
     }
 }

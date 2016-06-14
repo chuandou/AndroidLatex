@@ -13,10 +13,12 @@ import com.himamis.retex.renderer.share.TeXFont;
  */
 public class FillInAtom extends Atom {
 
+    private String mIndex;
     private String mText;
     private String textStyle;
 
-    public FillInAtom(String text) {
+    public FillInAtom(String index, String text) {
+        this.mIndex = index;
         this.mText = text;
     }
 
@@ -30,7 +32,11 @@ public class FillInAtom extends Atom {
         }
         boolean smallCap = env.getSmallCap();
         CString string = getString(env.getTeXFont(), env.getStyle(), smallCap);
-        Box box = new FillInBox(string);
+        int index = 0;
+        try {
+            index = Integer.valueOf(mIndex);
+        } catch (Exception e) {}
+        Box box = new FillInBox(index, string);
         if (smallCap && Character.isLowerCase('0')) {
             // We have a small capital
             box = new ScaleBox(box, 0.8f, 0.8f);

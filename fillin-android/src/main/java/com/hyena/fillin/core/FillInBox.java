@@ -18,14 +18,16 @@ import com.hyena.fillin.utils.AjLatexMath;
  */
 public class FillInBox extends Box {
 
+    private int mIndex;
     private final CStringFont cf;
     private final float size;
     private CString cString;
     private RectF mRect = new RectF();
     private RectF mBorderF = new RectF();
 
-    public FillInBox(CString string) {
+    public FillInBox(int index, CString string) {
         super();
+        this.mIndex = index;
         this.cString = string;
         cf = string.getStringFont();
         size = string.getMetrics().getSize();
@@ -85,5 +87,9 @@ public class FillInBox extends Box {
 
     public void setFocus(boolean focus) {
         this.focus = focus;
+    }
+
+    public int getIndex() {
+        return mIndex;
     }
 }

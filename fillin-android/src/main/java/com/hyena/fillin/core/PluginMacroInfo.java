@@ -31,7 +31,7 @@ public class PluginMacroInfo extends MacroInfo {
         try {
             switch (id) {
                 case 1: {//FillIn atom
-                    return new FillInAtom(args[1]);
+                    return new FillInAtom(args[1], args[2]);
                 }
                 default:
                     return null;
