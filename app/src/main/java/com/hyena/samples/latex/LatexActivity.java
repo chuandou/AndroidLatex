@@ -1,11 +1,9 @@
 package com.hyena.samples.latex;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 
 import com.hyena.samples.latex.fragment.SampleLatexFragment1;
 
